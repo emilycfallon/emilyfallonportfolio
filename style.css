@@ -33,6 +33,11 @@ p, input, textarea {
     border-radius: .25rem;
 }
 
+.button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
 .main {
     position: relative; 
     top: 5rem;
@@ -139,6 +144,103 @@ h1 .hi {
     box-shadow: .5rem .5rem .5rem .5rem darkgrey;
 }
 
+/*modal*/
+
+#desktop-1, #desktop-2, #mobile-1, #mobile-2 {
+    cursor: pointer;
+}
+
+#desktop-1:hover, #desktop-2:hover, #mobile-1:hover, #mobile-2:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding-bottom: 400px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 46vw; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-height: 200vw;
+    /*top: 340rem;
+    max-width: 75%;*/
+}
+
+.modal-mobile {
+    display: none;  /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding-bottom: 400px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 46vw; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-mobile-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-height: 200vw;
+    /*top: 340rem;
+    max-width: 75%;*/
+}
+
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+}
+ 
+@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+}
+
+@-webkit-keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+}
+
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
+
+@media only screen and (max-width: 60rem){
+    .modal-content {
+        width: 100%;
+        
+    }
+}
+
 @media only screen and (max-width: 60rem) {
     .project-container {
         flex-wrap: wrap;
@@ -189,4 +291,15 @@ input:first-of-type {
     margin-top: 2rem;
 }
 
+/*footer*/
 
+footer {
+    background-color: #B83C2C;
+    position: relative;
+    bottom: -2rem;
+    padding: .25rem 2rem;
+}
+
+footer h4 {
+    color: white;
+}
