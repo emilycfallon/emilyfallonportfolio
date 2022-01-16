@@ -25,19 +25,6 @@ p, input, textarea {
     
 }
 
-.button {
-    background-color: #B83C2C;
-    color: white;
-    padding: 1rem 4rem;
-    border: .25rem solid #B83C2C;
-    border-radius: .25rem;
-}
-
-.button:hover {
-    opacity: .8;
-    cursor: pointer;
-}
-
 .main {
     position: relative; 
     top: 5rem;
@@ -50,6 +37,20 @@ p, input, textarea {
 
 .h2-descrip {
     margin-bottom: 2rem;
+}
+
+/*button*/
+.button {
+    background-color: #B83C2C;
+    color: white;
+    padding: 1rem 4rem;
+    border: .25rem solid #B83C2C;
+    border-radius: .25rem;
+}
+
+.button:hover {
+    opacity: .8;
+    cursor: pointer;
 }
 
 /*Nav Bar*/
@@ -121,8 +122,9 @@ h1 .hi {
 }
 
 .description p {
-    flex-basis: 20rem;
-    padding-left: 2rem;
+    flex-basis: 30rem;
+    padding-left: 3rem;
+    text-indent: 3rem;
 }
 
 /*projects*/
@@ -146,61 +148,44 @@ h1 .hi {
 
 /*modal*/
 
-#desktop-1, #desktop-2, #mobile-1, #mobile-2 {
+#image {
     cursor: pointer;
 }
 
-#desktop-1:hover, #desktop-2:hover, #mobile-1:hover, #mobile-2:hover {
+#image:hover {
     opacity: 0.8;
 }
 
 .modal {
-    display: none;  /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 99; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed;
+    z-index: 99; 
+    padding-top: 100px; 
     padding-bottom: 400px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 46vw; /* Full height */
-    overflow: scroll; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; 
+    height: 46vw; 
+    overflow: scroll; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
 .modal-content {
     margin: auto;
     display: block;
-    width: auto;
-    max-height: 200vw;
-    /*top: 340rem;
-    max-width: 75%;*/
+    max-width: 75%;
+    height: auto;
+    
 }
 
-.modal-mobile {
-    display: none;  /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 99; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    padding-bottom: 400px;
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 46vw; /* Full height */
-    overflow: scroll; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-.modal-mobile-content {
+.modal-content-mobile {
     margin: auto;
     display: block;
-    width: auto;
-    max-height: 200vw;
-    /*top: 340rem;
-    max-width: 75%;*/
+    max-width: 40%;
+    height: auto;
 }
+
 
 
 @-webkit-keyframes zoom {
@@ -234,9 +219,9 @@ h1 .hi {
     animation-duration: 0.6s;
 }
 
-@media only screen and (max-width: 60rem){
-    .modal-content {
-        width: 100%;
+@media only screen and (max-width: 40rem){
+    .modal-content, .modal-content-mobile {
+        max-width: 85%;
         
     }
 }
@@ -254,7 +239,6 @@ h1 .hi {
     justify-content: center;
     flex-wrap: wrap-reverse;
     padding: 3rem;
-    /*align-items: center;*/
 }
 
 .contact-subtitle {
@@ -268,6 +252,7 @@ h1 .hi {
 .contact-info-section {
     padding: 1rem 3rem;
 }
+
 /*contact form*/
 
 .form fieldset {

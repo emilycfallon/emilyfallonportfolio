@@ -1,35 +1,32 @@
-var modal = document.getElementById('myModal');
- 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-//desktop 2
-var img = document.getElementById('desktop-2');
-var modalImg = document.getElementById("img03");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    modalImg.alt = this.alt;
-}
- 
- 
-// When the user clicks on <span> (x), close the modal
-modal.onclick = function() {
-    img03.className += " out";
-    setTimeout(function() {
-       modal.style.display = "none";
-       img03.className = "modal-content";
-     }, 400);
+const modal = document.getElementById('myModal');
+const modalMobile = document.getElementById('myModalMobile');
+const modalImg = document.getElementById('img01');
+const modalImgMobile = document.getElementById('img02');
+
+var img = document.querySelectorAll('.thumbnail');
+var img2 = document.querySelectorAll('.thumbnail2');
     
-}    
-
-//desktop 1
-var img = document.getElementById('desktop-1');
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
+for (var i=0; i<img.length; i++){
+    
+    img[i].onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     modalImg.alt = this.alt;
+    }
+     
 }
 
+for (var i=0; i<img2.length; i++){
+    
+    img2[i].onclick = function(){
+    modalMobile.style.display = "block";
+    modalImgMobile.src = this.src;
+    modalImgMobile.alt = this.alt;
+}
+     
+}
+
+// When the user clicks on <span> (x), close the modal
 modal.onclick = function() {
     img01.className += " out";
     setTimeout(function() {
@@ -37,8 +34,16 @@ modal.onclick = function() {
        img01.className = "modal-content";
      }, 400);
     
-}
+ } 
+
+modalMobile.onclick = function() {
+    img02.className += " out";
+    setTimeout(function() {
+       modalMobile.style.display = "none";
+       img02.className = "modal-content-mobile";
+     }, 400);
+    
+ } 
+
 
  
-
-   
